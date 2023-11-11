@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kanok's Front-End teaching website</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Front-End 141</h1>
+        </div>
+    </header>
+
+    <nav class="container" id="navbar">
+        <ul>
+            <li><a href="#lesson1">Lesson 1</a></li>
+            <li><a href="#lesson2">Lesson 2</a></li>
+            <li><a href="#lesson3">Lesson 3</a></li>
+            <li><a href="#lesson4">Lesson 4</a></li>
+            <li><a href="#lesson5">Lesson 5</a></li>
+            <li><a href="#lesson6">Lesson 6</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Lesson 1 -->
+        <section id="lesson1" class="lesson">
+            <h2>บทเรียนที่ 1: การแนะนำเกี่ยวกับ HTML</h2>
+            <img src="img/html.png" alt="โลโก้ HTML" width="150">
+            <p>ยินดีต้อนรับสู่โลกของการพัฒนาเว็บ ในบทเรียนนี้เราจะเจาะลึกไปยังพื้นฐานของ HTML</p>
+            <div class="lesson-content">
+                <h3>โครงสร้างของ HTML</h3>
+                <p>HTML เป็นพื้นฐานของทุกหน้าเว็บ ใช้โครงสร้างของแท็กเพื่อกำหนดเนื้อหาและเค้าโครง มาสำรวจโครงสร้างพื้นฐานกันเล้ย!:</p>
+            </div>
+            <div class="code-example">
+                <h3>ตัวอย่าง:</h3>
+                <pre><code>&lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;หน้าเว็บแรกของฉัน&lt;/title&gt;
+    &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;สวัสดี!, ฉันนักพัฒนาเว็บ!&lt;/h1&gt;
+            &lt;p&gt;ยินดีต้อนรับสู่โลกของ HTML.&lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+            <!-- Lesson 1 Video -->
+            <div class="video-container">
+                <video controls>
+                    <source src="vid/html.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            </div>
+            <div class="interactive-lesson">
+                <h3>บทเรียนแบบ Interactive:</h3>
+                <button class="interactive-toggle">บททดสอบหลังเรียน</button>
+                <div class="interactive-content hidden">
+                    <p>เพิ่มส่วนใหม่ในโค้ด HTML ด้วยหัวข้อรองและรายการที่ไม่เรียงลำดับของงานอดิเรกที่คุณชื่นชอบ</p>
+                    <p id="hint1">คำแนะนำ: ใช้แท็ก &lt;section&gt; และ &lt;ul&gt;</p>
+                    <!-- ทดสอบสำหรับบทเรียนที่ 1 -->
+                    <h4>คำถาม:</h4>
+                    <p>แท็ก HTML ที่ใช้กำหนดรายการที่ไม่เรียงลำดับคืออะไร?</p>
+                    <label>
+                        <input type="radio" name="quiz1" value="correct"> &lt;ul&gt;
+                    </label>
+                    <label>
+                        <input type="radio" name="quiz1" value="incorrect"> &lt;ol&gt;
+                    </label>
+                    <button onclick="checkQuiz('quiz1', 'hint1')">ส่งคำตอบ</button>
+                
+            
+            <pre><code>&lt;!-- การแก้ไข HTML ของคุณ --&gt;
+    &lt;body&gt;
+        &lt;h1&gt;สวัสดี, นักพัฒนาเว็บ!&lt;/h1&gt;
+        &lt;p&gt;ยินดีต้อนรับสู่โลกที่น่าทึ่งของ HTML.&lt;/p&gt;
+        
+        &lt;section&gt;
+        &lt;h2&gt;เครื่องมือพัฒนาเว็บที่ฉันชื่นชอบ&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Visual Studio Code&lt;/li&gt;
+            &lt;li&gt;Chrome Developer Tools&lt;/li&gt;
+            &lt;li&gt;GitHub&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/section&gt;
+        
+    &lt;/body&gt;</code></pre>
+            </div>
+            </div>
+        </section>
+    </div>
+        
+
+    <!-- Lesson 2 -->
+    <div class="container">
+        <section id="lesson2" class="lesson">
+            <h2>บทเรียนที่ 2: Cascading Style Sheets (CSS)</h2>
+            <img src="img/css.png" alt="โลโก้ CSS" width="150">
+            <p>ตอนนี้ที่คุณได้เรียนรู้ HTML แล้ว มาเริ่มต้นเพิ่มสไตล์ให้กับหน้าเว็บของคุณด้วย CSS!</p>
+            <div class="lesson-content">
+                <h3>กฎและเลือกตั้งสไตล์</h3>
+                <p>CSS ช่วยคุณควบคุมเค้าโครงและลักษณะขององค์ประกอบ HTML ของคุณ มาสำรวจกฎและตัวเลือกสไตล์:</p>
+            </div>
+        <div class="code-example">
+            <h3>ตัวอย่าง:</h3>
+            <pre><code>/* กฎสไตล์ CSS */
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    }</code></pre>
+    <!-- Lesson 2 Video -->
+    <div class="video-container">
+        <video controls>
+            <source src="vid/css.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+        </div>
+        <div class="interactive-lesson">
+            <h3>บทเรียนแบบ Interactive:</h3>
+            <p>เพิ่มกฎ CSS เพื่อเปลี่ยนสีและขนาดตัวอักษรของหัวข้อและย่อหน้าในตัวอย่างด้านบน</p>
+            <div class="interactive-lesson">
+                <button class="interactive-toggle">บททดสอบหลังเรียน</button>
+                <div class="interactive-content hidden">
+                    <p>สร้างกฎ CSS เพื่อเปลี่ยนสีพื้นหลังของย่อหน้าเป็นสีเขียวอ่อน</p>
+                    <p id="hint2">คำใบ้: ใช้เลือกตัว &lt;p&gt; และคุณสมบัติ background-color</p>
+                    <h4>คำถาม:</h4>
+                    <p>คุณสมบัติ CSS ที่ใช้เปลี่ยนสีพื้นหลังขององค์ประกอบคือ?</p>
+                    <label>
+                        <input type="radio" name="quiz2" value="correct"> background-color
+                    </label>
+                    <label>
+                        <input type="radio" name="quiz2" value="incorrect"> color
+                    </label>
+                    <button onclick="checkQuiz('quiz2', 'hint2')">ส่งคำตอบ</button>
+                
+           
+            <pre><code>/* CSS ที่คุณปรับแก้ */
+    h1 {
+    color: #0077cc;
+    font-size: 2em;
+    }
+
+    p {
+    color: #333;
+    font-size: 1.2em;
+    }</code></pre>
+        </div>
+        </div>
+        </div>
+    </section>
+</div>
+
+<!-- Lesson 3 -->
+<div class="container">
+<section id="lesson3" class="lesson">
+    <h2>บทเรียนที่ 3: JavaScript Fundamentals</h2>
+    <img src="img/js.png" alt="โลโก้ JavaScript" width="150">
+    <p>เวลาที่จะทำให้หน้าเว็บของคุณเป็นไปได้! มาศึกษาพื้นฐานของ JavaScript กัน</p>
+    <div class="lesson-content">
+        <h3>ตัวแปรและประเภทข้อมูล</h3>
+        <p>JavaScript ใช้ตัวแปรเพื่อเก็บและจัดการข้อมูล สำรวจตัวแปรและประเภทข้อมูลทั่วไป:</p>       
+    </div>
+    <div class="code-example">
+        <h3>ตัวอย่าง:</h3>
+        <pre><code>// ตัวแปร JavaScript
+let message = 'สวัสดี, JavaScript!';
+
+// ประเภทข้อมูล
+let number = 42;
+let isTrue = true;
+let name = 'John';</code></pre>
+            <!-- Lesson 3 Video -->
+            <div class="video-container">
+                <video controls>
+                    <source src="vid/js.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+    </div>
+    <div class="interactive-lesson">
+        <h3>บทเรียนแบบ Interactive:</h3>
+        <p>สร้างตัวแปรใหม่และกำหนดค่าให้กับมัน จากนั้นแสดงค่าในคอนโซล</p>
+        <div class="interactive-lesson">
+            <button class="interactive-toggle">บททดสอบหลังเรียน</button>
+            <div class="interactive-content hidden">
+                <p>สร้างตัวแปรชื่อ 'greeting' และกำหนดค่าเป็น 'สวัสดี, JavaScript!' แล้วแสดงค่าในคอนโซล</p>
+                <p id="hint3">คำใบ้: ใช้ฟังก์ชัน <code class="yellow">console.log()</code></p>
+                <h4>คำถาม:</h4>
+                <p>คำสั่งคีย์ที่ใช้ประกาศตัวแปรใน JavaScript คือ?</p>
+                <label>
+                    <input type="radio" name="quiz3" value="correct"> let
+                </label>
+                <label>
+                    <input type="radio" name="quiz3" value="incorrect"> var
+                </label>
+                <button onclick="checkQuiz('quiz3', 'hint3')">ส่งคำตอบ</button>
+            
+        <pre><code>// JavaScript แบบ Interactive ของคุณ
+let myVariable = 'สวัสดี, JavaScript!';
+console.log(myVariable);</code></pre>
+    </div>
+</div>
+</div>
+</section>
+</div>
+
+
+    <!-- Lesson 4 -->
+    <div class="container">
+    <section id="lesson4" class="lesson">
+        <h2>บทเรียนที่ 4: การนำเว็บไซต์ขึ้น GitHub Pages</h2>
+        <img src="img/git.png" alt="GitHub Logo" width="150">
+        <p>ตอนนี้ที่คุณได้สร้างเว็บไซต์ที่น่าทึ่งแล้ว เรามาเรียนรู้วิธีการนำเว็บไซต์ขึ้น GitHub Pages กัน</p>
+        <div class="lesson-content">
+            <h3>การตั้งค่า GitHub Pages</h3>
+            <p>GitHub Pages ช่วยให้คุณสามารถโฮสต์เว็บไซต์แบบสถิตจากที่เก็บรักษาของ GitHub ของคุณโดยตรง ทำตามขั้นตอนเหล่านี้:</p>
+            <ol>
+                <li>สร้างแบรนช์ใหม่ในที่เก็บของคุณชื่อ <code>gh-pages</code></li>
+                <li>ไปที่การตั้งค่าของที่เก็บ</li>
+                <li>ในส่วน GitHub Pages เลือกแบรนช์ <code>gh-pages</code> เป็นแหล่งที่มา</li>
+                <li>บันทึกการเปลี่ยนแปลง และเว็บไซต์ของคุณจะพร้อมใช้งานที่ <code>https://yourusername.github.io/your-repo/</code></li>
+            </ol>
+        </div>
+        <div class="code-example">
+            <h3>ตัวอย่าง:</h3>
+            <p>ในกรณีที่ที่เก็บของคุณชื่อ <code>your-repo</code> เว็บไซต์ของคุณจะสามารถเข้าถึงได้ที่:</p>
+            <pre><code>https://yourusername.github.io/your-repo/</code></pre>
+            <!-- Lesson 4 Video -->
+            <div class="video-container">
+                <video controls>
+                    <source src="vid/github.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="interactive-lesson">
+            <h3>บทเรียนแบบ Interactive:</h3>
+            <p>ทำตามขั้นตอนข้างต้นเพื่อนำเว็บไซต์ที่คุณสอนขึ้น GitHub Pages</p>
+            <!-- Add interactive elements as needed -->
+            <div class="interactive-lesson">
+                <button class="interactive-toggle">บททดสอบหลังเรียน</button>
+                <div class="interactive-content hidden">
+                    <p>ทำตามขั้นตอนข้างต้นเพื่อนำเว็บไซต์ที่คุณสร้างขึ้น GitHub Pages แล้วแชร์ลิงก์กับผู้อื่น</p>
+                    <p id="hint4">Hint: ตรวจสอบให้แน่ใจว่า git ของคุณเป็นสาธารณะเพื่อให้เว็บไซต์สามารถเข้าถึงได้</p>
+                    <!-- Quiz for Lesson 4 -->
+                    <h4>Quiz:</h4>
+                    <p>วัตถุประสงค์ของแบรนช์ <code class="yellow">gh-pages</code> ในการนำเว็บไซต์ขึ้น GitHub Pages คืออะไร?</p>
+                    <label>
+                        <input type="radio" name="quiz4" value="correct"> เป็นแหล่งที่มาสำหรับเว็บไซต์ที่ถูกนำขึ้น
+                    </label>
+                    <label>
+                        <input type="radio" name="quiz4" value="incorrect"> เพื่อเก็บรักษาโค้ดเพิ่มเติมสำหรับเว็บไซต์
+                    </label>
+                    <button onclick="checkQuiz('quiz4', 'hint4')">Submit Answer</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <!-- บทเรียนที่ 5 -->
+    <div class="container">
+<section id="lesson5" class="lesson">
+    <h2>บทเรียนที่ 5: Responsive Web Design</h2>
+    <img src="img/respon.png" alt="Responsive Design Logo" width="150">
+    <p>เพื่อให้แน่ใจว่าหน้าเว็บของคุณมีลักษณะที่ดีทุกอุปกรณ์! มาศึกษาหลักการของ Responsive Web Design กัน</p>
+    <div class="lesson-content">
+        <h3>Media Queries</h3>
+        <p>Media queries ช่วยให้คุณสามารถใช้สไตล์โดยอิงตามลักษณะของอุปกรณ์ มาเรียนรู้การใช้ media queries:</p>
+    </div>
+    <div class="code-example">
+        <h3>ตัวอย่าง:</h3>
+        <pre><code>/* Media Query สำหรับหน้าจอขนาดเล็ก */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}</code></pre>
+    <!-- Lesson 5 Video -->
+    <div class="video-container">
+        <video controls>
+            <source src="vid/@media.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    </div>
+    <div class="interactive-lesson">
+        <h3>บทเรียนแบบ Interactive:</h3>
+        <p>เพิ่ม media query เพื่อปรับขนาดตัวอักษรเมื่อความกว้างของหน้าจอน้อยกว่า 400 พิกเซล</p>
+        <!-- เพิ่มส่วน Interactive ตามที่จำเป็น -->
+        <div class="interactive-lesson">
+            <button class="interactive-toggle">บททดสอบหลังเรียน</button>
+            <div class="interactive-content hidden">
+                <p>เพิ่ม media query เพื่อเปลี่ยนขนาดตัวอักษรเป็น 18px เมื่อความกว้างของหน้าจอน้อยกว่า 500 พิกเซล</p>
+                <p id="hint5">คำใบ้: ใช้กฎ <code class="yellow">@media</code> และคุณสมบัติ <code>max-width</code></p>
+                <!-- คำถามสำหรับบทเรียนที่ 5 -->
+                <h4>คำถาม:</h4>
+                <p>วัตถุประสงค์ของ media query ใน CSS คือ?</p>
+                <label>
+                    <input type="radio" name="quiz5" value="correct"> ใช้สไตล์โดยอิงตามลักษณะของอุปกรณ์
+                </label>
+                <label>
+                    <input type="radio" name="quiz5" value="incorrect"> สร้าง animation
+                </label>
+                <button onclick="checkQuiz('quiz5', 'hint5')">ส่งคำตอบ</button>
+            
+        <pre><code>/* CSS ที่ต้องปรับแก้ */
+@media only screen and (max-width: 400px) {
+  body {
+    font-size: 12px;
+  }
+}</code></pre>
+    </div>
+</div>
+</div>
+</section>
+</div>  
+
+    <script src="script.js"></script>
+
+</body>
+</html>
