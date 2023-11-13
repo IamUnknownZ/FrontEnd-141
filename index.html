@@ -305,6 +305,100 @@ console.log(myVariable);</code></pre>
 </div>
 </section>
 </div>  
+    <!-- Lesson 6 -->
+<div class="container">
+    <section id="lesson6" class="lesson">
+      <h2>บทเรียนที่ 6: เทคนิค CSS ขั้นสูง</h2>
+      <p>ศึกษาเทคนิคการใช้ CSS ที่ลึกลับและสไตล์ที่ขั้นสูง</p>
+      <div class="lesson-content">
+        <h3>การใช้ CSS Transitions และ Animations</h3>
+        <p>CSS มีความสามารถในการสร้างการเปลี่ยนแปลงและการเคลื่อนไหวที่สวยงาม มาลองสำรวจการใช้ CSS Transitions และ Animations:</p>
+      </div>
+      <div class="code-example">
+        <h3>ตัวอย่าง:</h3>
+        <pre><code>/* ตัวอย่าง CSS Animation */
+  .animated-element {
+    animation: slideIn 2s ease-in-out;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }</code></pre>
+        <!-- Lesson 6 Video -->
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/T33NN_pPeNI?si=F8qnq5PJPoPQmq9" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="interactive-lesson">
+        <h3>บทเรียนแบบ Interactive:</h3>
+        <p>ลองสร้าง Animation ด้วย CSS Transitions หรือ Animations</p>
+        <button class="interactive-toggle">บททดสอบหลังเรียน</button>
+        <div class="interactive-content hidden">
+          <p>ให้ลองสร้าง Animation ใหม่โดยใช้ CSS Transitions หรือ Animations และอธิบายลักษณะของ Animation ที่สร้าง</p>
+          <p id="hint6">คำใบ้: ลองใช้คุณสมบัติที่ต่าง ๆ ของ CSS Transitions หรือ Animations</p>
+          <h4>คำถาม:</h4>
+          <p>คุณสามารถใช้ CSS Transitions หรือ Animations ในการสร้างอะไร?</p>
+          <label>
+            <input type="radio" name="quiz6" value="correct"> การเปลี่ยนแปลงและการเคลื่อนไหวที่สวยงามในเว็บ
+          </label>
+          <label>
+            <input type="radio" name="quiz6" value="incorrect"> การสร้างรูปแบบเว็บ
+          </label>
+          <button onclick="checkQuiz('quiz6', 'hint6')">ส่งคำตอบ</button>
+        </div>
+      </div>
+    </section>
+  </div>
+        <!-- Lesson 7 -->
+<div class="container">
+    <section id="lesson7" class="lesson">
+      <h2>บทเรียนที่ 7: แนะนำ Front-End Frameworks (เช่น React)</h2>
+      <img src="img/react-logo.png" alt="โลโก้ React" width="150">
+      <p>สำรวจ Framework และ Library ที่นิยมในการพัฒนา Front-End</p>
+      <div class="lesson-content">
+        <h3>ภาพรวมของ React</h3>
+        <p>React เป็นหนึ่งใน Front-End Framework ที่ได้รับความนิยม มาทำความรู้จักกับ React และหน่วยสร้างสถานะ (State)</p>
+      </div>
+      <div class="code-example">
+        <h3>ตัวอย่าง:</h3>
+        <pre><code>// ตัวอย่าง Component ของ React
+  import React, { useState } from 'react';
+  
+  function Counter()
+    const [count, setCount] = useState(0);
+</code></pre>
+        <!-- Lesson 7 Video -->
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/gNg_pKbH0os?si=aTEojYdJAzHynhVy" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="interactive-lesson">
+        <h3>บทเรียนแบบ Interactive:</h3>
+        <p>ลองสร้าง Component ใหม่ด้วย React และใช้หน่วยสร้างสถานะ (State) ในการจัดการข้อมูล</p>
+        <button class="interactive-toggle">บททดสอบหลังเรียน</button>
+        <div class="interactive-content hidden">
+          <p>ลองสร้าง Component ใหม่ที่มีหน่วยสร้างสถานะ (State) เพื่อจัดการข้อมูลบางประการ</p>
+          <p id="hint7">คำใบ้: ใช้ React Hook ที่ชื่อว่า `useState`</p>
+          <h4>คำถาม:</h4>
+          <p>React Hook ที่ใช้ในการเพิ่มหน่วยสร้างสถานะ (State) คือ?</p>
+          <label>
+            <input type="radio" name="quiz7" value="correct"> useState
+          </label>
+          <label>
+            <input type="radio" name="quiz7" value="incorrect"> useEffect
+          </label>
+          <button onclick="checkQuiz('quiz7', 'hint7')">ส่งคำตอบ</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  
 
     <script src="script.js"></script>
 
