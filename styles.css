@@ -1,3 +1,6 @@
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -15,6 +18,10 @@
         .container img{
             max-width: 100px;
         }
+        .container ul li a:hover{
+            color: #0052cc;
+        }
+        
         header {
             background-color: #333; /* Pastel blue */
             color: white;
@@ -209,20 +216,3 @@ code {
         margin: 0 auto;
     }
 }
-
-/* Styling for pre and code elements */
-pre {
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
-    overflow: auto;
-    margin-bottom: 20px; /* Add space between pre elements */
-    font-size: smaller;
-}
-
-code {
-    font-family: 'Courier New', monospace;
-    color: #333;
-}
-
